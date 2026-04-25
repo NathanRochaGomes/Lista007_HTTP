@@ -11,6 +11,8 @@ public class jogadorService {
     List<Jogador> principais = new ArrayList<>();
     List<Jogador> reservas = new ArrayList<>();
 
+
+    // Construtor para inicializar os jogadores principais e reservas
     public jogadorService() {
         principais.add(new Jogador("Alisson", "Goleiro", 31));
         principais.add(new Jogador("Danilo", "Lateral Direito", 32));
@@ -30,9 +32,9 @@ public class jogadorService {
         reservas.add(new Jogador("Lucas P.", "Meia",31));
         reservas.add(new Jogador("Gabigol", "Centroavante", 27));
     }
+
+    // PUT /principal/jogador/{posicao}
     public String substituir(String posicao) {
-
-
         int indice = -1;
         for (int i = 0; i < principais.size(); i++) {
             if (principais.get(i).getPosicao().equalsIgnoreCase(posicao)) {
